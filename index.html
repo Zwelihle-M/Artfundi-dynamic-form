@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artfundi Form</title>
+    <!-- artfundi favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/public/favicon/artfundi-favicon.png"
+    />
+    <!-- bootstrap cdn usage-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Jquery cdn usage  -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- link to css file for custom styles -->
+    <link href="css/main.css" rel="stylesheet" />
+    <!-- importing font Work Sans using google cdn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="container-fluid">
+        <!-- flex layout for the whole page -->
+        <div class="row">
+          <!-- navigationbar/tabs -->
+          <nav class="col-md-3 main-navigation">
+            <div class="nav" role="tablist">
+              <!-- basic details -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-Internet Security.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="active remove-navigation-links main-title"
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Basic Details
+                  </button>
+                  <p class="main-description">Information about work</p>
+                </div>
+              </div>
+              <!-- images -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-images.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-profile"
+                    aria-selected="false"
+                  >
+                    Profile
+                  </button>
+                  <p class="main-description">Public profile & information</p>
+                </div>
+              </div>
+              <!-- notes -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-devices.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-about"
+                    aria-selected="false"
+                  >
+                    Notes
+                  </button>
+                  <p class="main-description">
+                    Private & public notes about work
+                  </p>
+                </div>
+              </div>
+              <!-- location -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-location.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-about"
+                    aria-selected="false"
+                  >
+                    ID & Location
+                  </button>
+                  <p class="main-description">ID & Location of work</p>
+                </div>
+              </div>
+              <!-- finances -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/piggy-bank.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-about"
+                    aria-selected="false"
+                  >
+                    Financials
+                  </button>
+                  <p class="main-description">Financial Information</p>
+                </div>
+              </div>
+              <!-- sales -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-cart.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-about"
+                    aria-selected="false"
+                  >
+                    Sales & Statuses
+                  </button>
+                  <p class="main-description">Sales & Statuses</p>
+                </div>
+              </div>
+              <!-- condition -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-condition.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-about"
+                    aria-selected="false"
+                  >
+                    Artwork Condition & Provenance
+                  </button>
+                  <p class="main-description">Condition and history of work</p>
+                </div>
+              </div>
+              <!-- documents -->
+              <div class="main-link-content">
+                <span>
+                  <!-- first svg marked as blue to replicate an active state/tab -->
+                  <img
+                    src="public/icons/noun-documents.svg"
+                    alt=""
+                    class="image-container"
+                    width="40"
+                    height="40"
+                  />
+                </span>
+                <div class="main-text-container">
+                  <button
+                    class="remove-navigation-links main-title"
+                    id="nav-about-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-about"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-about"
+                    aria-selected="false"
+                  >
+                    Link Documents
+                  </button>
+                  <p class="main-description">All documents related to work</p>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <!-- main view tab -->
+          <div class="col-md-9 main-form-container" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-home"
+              role="tabpanel"
+              aria-labelledby="nav-home-tab"
+            >
+              <h4 class="text-sm">Basic Detail</h4>
+
+              <!-- main form -->
+              <form id="main-form" class="mt-4">
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <!-- Artist Field -->
+                    <div class="input-container">
+                      <!-- Label and Add New Link functional one-->
+                      <div class="form-input-header">
+                        <label class="label" for="artistSelect">Artist</label>
+                        <a href="#" class="add-new-artist">+ add new</a>
+                      </div>
+
+                      <!-- Select Input Field -->
+                      <select
+                        id="artistSelect"
+                        class="form-select form-select-md fs-10"
+                        name="artist"
+                      >
+                        <option value="">Select an Artist</option>
+                        <option value="da-vinci">Leonardo da Vinci</option>
+                        <option value="picasso">Pablo Picasso</option>
+                        <option value="vangogh">Vincent van Gogh</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Title -->
+                  <div class="col-md-6">
+                    <!-- title field -->
+                    <div class="input-container">
+                      <!-- Label and Add New Link -->
+                      <div class="form-input-header">
+                        <label class="label" for="title">Title</label>
+                      </div>
+
+                      <!-- Select Input Field -->
+                      <input
+                        type="text"
+                        class="form-control form-control-md"
+                        id="title"
+                        placeholder="Work title"
+                        name="title"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <!-- year field -->
+                  <div class="col-md-6">
+                    <!-- Label and Add New Link -->
+                    <div class="form-input-header">
+                      <label class="label" for="year">Year Created</label>
+                    </div>
+                    <input
+                      type="text"
+                      id="year"
+                      class="form-control form-control-md"
+                      name="year"
+                    />
+                    <p class="form-text-description">
+                      Please enter the year this work was created
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- artist field -->
+                    <div class="input-container">
+                      <!-- Label and Add New Link -->
+                      <div class="form-input-header">
+                        <label class="label" for="medium">Select Medium</label>
+                        <!-- <a href="#" class="add-new">+ add new</a> -->
+                      </div>
+
+                      <!-- Select Input Field -->
+                      <select
+                        id="medium"
+                        class="form-select form-select-md"
+                        name="medium"
+                      >
+                        <option value="">Please Select</option>
+                        <option value="default-medium">Default Medium</option>
+                        <option value="colour-lithograph">
+                          Colour lithograph
+                        </option>
+                        <option value="etching">Etching</option>
+                        <option value="oil-on-canvas">Oil on canvas</option>
+                        <option value="screen-print">Screen Print</option>
+                        <option value="oil-on-board">Oil on board</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inscriptions -->
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <!-- inscriptions field -->
+                    <div class="input-container">
+                      <!-- Label and Add New Link -->
+                      <div class="form-input-header">
+                        <label class="label" for="inscriptions"
+                          >Inscriptions</label
+                        >
+                        <!-- <a href="#" class="add-new">+ add new</a> -->
+                      </div>
+
+                      <!-- Select Input Field -->
+                      <select
+                        id="inscriptions"
+                        class="form-select form-select-md"
+                        name="inscriptions"
+                      >
+                        <option value="">Please Select</option>
+                        <option value="signed">Signed</option>
+                        <option value="dated">Dated</option>
+                        <option value="titled">Titled</option>
+                        <option value="numbered">Numbered</option>
+                        <option value="inscribed">Inscribed</option>
+                        <option value="dedicated">Dedicated</option>
+                        <option value="stamped">Stamped</option>
+                        <option value="unsigned">Unsigned</option>
+                        <option value="unmarked">Unmarked</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Category -->
+                <div class="col-md-6">
+                  <!-- artist field -->
+                  <div class="input-container">
+                    <!-- Label and Add New Link -->
+                    <div class="form-input-header">
+                      <label class="label" for="category">Category</label>
+                      <!-- <a href="#" class="add-new">+ add new</a> -->
+                    </div>
+                    <!-- Select Input Field -->
+                    <select
+                      id="category"
+                      class="form-select form-select-md"
+                      name="category"
+                    >
+                      <option value="">Please Select</option>
+                      <option value="painting">Painting</option>
+                      <option value="sculpture">Sculpture</option>
+                      <option value="drawing">Drawing</option>
+                      <option value="printmaking">Printmaking</option>
+                      <option value="photography">Photography</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Branch -->
+                <div class="row mb-3">
+                  <!-- year field -->
+                  <div class="col-md-6">
+                    <!-- Label and Add New Link -->
+                    <div class="form-input-header">
+                      <label class="label" for="branch">Branch</label>
+                    </div>
+                    <!-- Select Input Field -->
+                    <select
+                      id="branch"
+                      class="form-select form-select-md"
+                      name="branch"
+                    >
+                      <option value="">Please Select</option>
+                      <option value="gallery">Gallery</option>
+                      <option value="museum">Museum</option>
+                      <option value="auction-house">Auction House</option>
+                      <option value="private-collection">
+                        Private Collection
+                      </option>
+                      <option value="artist-studio">Artist Studio</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- artist field -->
+                    <div class="input-container">
+                      <!-- Label and Add New Link -->
+                      <div class="form-input-header">
+                        <label class="label" for="ownership">Ownership</label>
+                        <!-- <a href="#" class="add-new">+ add new</a> -->
+                      </div>
+                      <!-- Select Input Field -->
+                      <select
+                        id="ownership"
+                        class="form-select form-select-md"
+                        name="ownership"
+                      >
+                        <option value="">Please Select</option>
+                        <option value="private-owner">Private Owner</option>
+                        <option value="public-institution">
+                          Public Institution
+                        </option>
+                        <option value="museum">Museum</option>
+                        <option value="gallery">Gallery</option>
+                        <option value="corporate-collection">
+                          Corporate Collection
+                        </option>
+                        <option value="artist-owned">Artist Owned</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="mb-2 mt-4" />
+
+                <div class="mt-4">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-save-exit me-2 btn-lg"
+                      >
+                        Save & Exit
+                      </button>
+                      <button type="button" class="btn btn-save-return btn-lg">
+                        Save & Return
+                      </button>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      Next Step
+                    </button>
+                  </div>
+                </div>
+                <div id="form-message" class="mt-3"></div>
+              </form>
+            </div>
+
+            <!-- Second view -->
+            <div
+              class="tab-pane fade mt-4"
+              id="nav-profile"
+              role="tabpanel"
+              aria-labelledby="nav-profile-tab"
+            >
+              <h4 class="text-sm">Profile Details</h4>
+              <!-- Second Form -->
+              <form id="second-form" class="mt-4">
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <!-- Email Field -->
+                    <div class="input-container">
+                      <label class="label" for="email">Email Address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- Comment Field -->
+                    <div class="input-container">
+                      <label class="label" for="comment">Comment</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="comment"
+                        name="comment"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <!-- Phone Field -->
+                    <div class="input-container">
+                      <label class="label" for="phone">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <!-- Message Field -->
+                    <div class="input-container">
+                      <label class="label" for="message">Message</label>
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="container">
+                  <div class="row justify-content-between align-items-center">
+                    <div class="col-12 col-sm-auto mb-2">
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-lg w-100"
+                      >
+                        Previous
+                      </button>
+                    </div>
+                    <div class="col-12 col-sm-auto mb-2">
+                      <button
+                        type="button"
+                        class="btn btn-success btn-lg w-100"
+                      >
+                        Save & Exit
+                      </button>
+                    </div>
+                    <div class="col-12 col-sm-auto mb-2">
+                      <button type="button" class="btn btn-dark btn-lg w-100">
+                        Save & Return
+                      </button>
+                    </div>
+                    <div class="col-12 col-sm-auto mb-2">
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-lg w-100"
+                      >
+                        Next Step
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Message container for feedback -->
+                <div id="second-form-message" class="mt-3"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- bootstrap javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javascript file -->
+    <script src="/scripts/main.js"></script>
+    <!-- Add New Modal active for the artist field -->
+    <div
+      class="modal fade"
+      id="addArtistModal"
+      tabindex="-1"
+      aria-labelledby="addArtistModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="add-artist-form">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addArtistModalLabel">
+                Add New Artist
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="newArtistName" class="form-label"
+                  >Artist Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="newArtistName"
+                  name="newArtistName"
+                  required
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Add Artist</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

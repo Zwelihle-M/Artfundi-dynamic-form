@@ -1,0 +1,255 @@
+/* resting a few default css styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* defining google font face */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* Resetting bootstrap default styles for the navigation tabs container */
+.remove-navigation-tabs {
+  all: unset;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+.remove-navigation-links {
+  all: unset;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  background-color: transparent;
+}
+.tab-content {
+  all: unset;
+  display: block;
+  padding: 0;
+}
+.tab-pane {
+  all: unset;
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+.nav-tabs {
+  all: unset;
+}
+.nav-item {
+  all: unset;
+}
+
+/* giving the main container a height and width to fit the entire page */
+.main-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* navigation/tab styling */
+.main-navigation {
+  padding: 20px;
+  padding-top: 40px;
+  height: 100vh;
+  border-right: 2px solid #eeeef4;
+}
+/* main-navigation items styling
+ */
+.main-link-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.main-link-content:hover {
+  background-color: #f4f6f9;
+}
+/* SVG/ Image styling */
+.image-container {
+  margin-right: 15px;
+}
+/* main-navigation items styling
+ */
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #50566a;
+  margin: 0;
+}
+.main-description {
+  font-size: 13px;
+  color: #abb7c3;
+  margin: 0;
+}
+
+/* main content styling */
+.main-form-container {
+  padding: 5rem;
+  /* overflow: hidden;  */
+  max-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .main-form-container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-form-container {
+    padding: 1rem;
+  }
+}
+.main-form-title {
+  color: #333;
+}
+
+/* main content styling */
+.second-form-container {
+  padding: 5rem;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .second-form-container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .second-form-container {
+    padding: 1rem;
+  }
+}
+.main-second-title {
+  color: #333;
+}
+.form-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 16px;
+  color: #abb7c3;
+}
+/* Add new link styling */
+.add-new {
+  font-size: 14px;
+  color: #647cf7;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* seperate styling for active modal */
+.add-new-artist {
+  font-size: 14px;
+  color: #647cf7;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.form-text-description {
+  font-size: 14px;
+  color: #333;
+}
+
+/* form buttons */
+.btn-save-exit,
+.btn-save-exit:focus,
+.btn-save-exit:active,
+.btn-save-exit:hover {
+  background-color: #0abb87;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.btn-save-return,
+.btn-save-return:focus,
+.btn-save-return:active,
+.btn-save-return:hover {
+  background-color: #282a3c;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.btn-next-step,
+.btn-next-step:focus,
+.btn-next-step:active,
+.btn-next-step:hover {
+  background-color: #5a67d8;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* second form buttons */
+.btn-primary {
+  background-color: #5a67d8;
+  border-color: #5a67d8;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.btn-primary:hover {
+  background-color: #333c87;
+  border-color: #333c87;
+}
+
+.btn-dark {
+  background-color: #282a3c;
+  border-color: #282a3c;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.btn-success {
+  background-color: #0abb87;
+  border-color: #0abb87;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.btn-outline-secondary {
+  background-color: #ffffff;
+  border-color: #505050;
+  color: #000000;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
